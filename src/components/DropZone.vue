@@ -132,9 +132,12 @@ async function transcode() {
     ffmpegStatus.value = msg
   })
   await ffmpeg.load({
-    coreURL: await toBlobURL(`${window.location.origin}/ffmpeg/ffmpeg-core.js`, 'text/javascript'),
+    coreURL: await toBlobURL(
+      `${window.location.origin}/ttttranscode/ffmpeg-core.js`,
+      'text/javascript'
+    ),
     wasmURL: await toBlobURL(
-      `${window.location.origin}/ffmpeg/ffmpeg-core.wasm`,
+      `${window.location.origin}/ttttranscode/ffmpeg-core.wasm`,
       'application/wasm'
     )
   })

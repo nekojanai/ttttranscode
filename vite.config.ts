@@ -9,6 +9,7 @@ import { readFileSync } from 'node:fs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/ttttranscode/' : '/',
   server: {
     headers: {
       'Cross-Origin-Opener-Policy': 'same-origin',
