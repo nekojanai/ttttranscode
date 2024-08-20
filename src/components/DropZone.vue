@@ -132,11 +132,8 @@ async function transcode() {
     ffmpegStatus.value = msg
   })
   await ffmpeg.load({
-    coreURL: await toBlobURL(`${window.location.origin}/ffmpeg/ffmpeg-core.js`, 'text/javascript'),
-    wasmURL: await toBlobURL(
-      `${window.location.origin}/ffmpeg/ffmpeg-core.wasm`,
-      'application/wasm'
-    )
+    coreURL: await toBlobURL(`/ffmpeg-core.js`, 'text/javascript'),
+    wasmURL: await toBlobURL(`/ffmpeg-core.wasm`, 'application/wasm')
   })
   await ffmpeg.writeFile(file.value!.name, await fetchFile(fileUrl.value))
   const outputFilename = `${file.value!.name.split('.')[0]}.${outputSelect.value?.value}`
