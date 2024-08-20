@@ -1,0 +1,37 @@
+:root {
+  --c-violet: rgba(174, 138, 255, 0.29);
+  --c-violet-hl: rgba(155, 101, 255, 0.188);
+  --c-violet-text: rgba(255, 255, 255, 1);
+
+  --c-violet-bg: rgba(27, 27, 27, 1);
+  --c-violet-bg-lighter: rgba(78, 78, 78, 1);
+
+  --color-background: var(--c-violet-bg);
+  --color-background-soft: var(--c-violet-bg-lighter);
+  --color-background-mute: var(--vt-c-black-mute);
+
+  --color-border: var(--c-violet);
+  --color-border-hover: var(--c-violet-hl);
+
+  --color-text: var(--c-violet-text);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
